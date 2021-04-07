@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+img{width: 100%}
+button{
+  outline: 0;
+  cursor: pointer;
+}
+.first-row{
+  background: #25001b;
+  color: #fff;
+  z-index: 10;
+  width: 100%;
+  button{
+    color: #fff;
+  }
+}
+.second-row{
+  display: none;
+}
+
+.subtitle-1{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ff005c;
+  letter-spacing: .2em;
+  font-size: .85em;
+}
+
+.subtitle-2, .subtitle-2 a{
+  color: #030303;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.text{
+  color: #252525;
+  font-size: .9rem;
+}
+
+section{
+  padding: 64px 32px;
+}
+
+
+@media(min-width: 992px){
+  *{
+    text-align: left;
+  }
+  .first-row{
+    width: 66%;
+    padding-left: 4em;
+  }
+  .second-row{
+    display: block;
+    width: 34%;
+  }
+  section{
+    padding: 64px;
+  }
+}
+@media(min-width: 1130px){
+  section{
+    padding: 64px 160px;
+  }
+}
+
+@import "./NavBar.scss";
+@import "./Hero.scss";
+@import "./AboutMe.scss";
+@import "./ContactMe.scss";
+@import "./Footer.scss";
+@import "./MySkills.scss";
+@import "./MyWork.scss";

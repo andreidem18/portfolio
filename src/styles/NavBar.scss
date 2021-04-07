@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+nav{
+    display: flex;
+    position: relative;
+  
+    .first-row{
+      display:flex;
+      align-items: center;
+      background: #1b0114;
+      justify-content: space-between;
+      height: 89px;
+      padding: 0 40px;
+      z-index: 1000;
+    }
+    button, a{
+      background: transparent;
+      text-decoration: none;
+      border: none;
+    }
+    button{
+      font-size: 1.5rem;
+    }
+    .sections{
+      display: none;
+    }
+  }
+  .first-row button, a{
+    background: transparent;
+    text-decoration: none;
+    border: none;
+  }
+  .logo{
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 2rem;
+    color: #fff600;
+  }
+  
+  .desplegable-menu{
+    position: absolute;
+    color: #fff;
+    background: #1b0114;
+    font-size: 1rem;
+    right: 0;
+    left: 0;
+    transition: .6s ease-in-out;
+    padding-bottom: 10px;
+    z-index: 100;
+    button, a{
+      text-align: left;
+      color: #fff;
+      font-size: 1rem;
+      display: block;
+      width: 100%;
+      padding: 10px 40px;
+      transition: .3s;
+      &:hover{
+        color: #ff005c;
+      }
+    }
+  }
+  .social-networks{
+    display: flex;
+    justify-content: center;
+    span{
+      display: none;
+    }
+    button, a{
+      width: unset;
+      padding: 10px 20px;
+    }
+    i{
+      font-size: 1.5rem;
+    }
+  }
+
+@media(min-width: 640px){
+  .desplegable-menu{
+    .sections-desplegable{
+      display: none;
+    }
+    .social-networks{
+      display: block;
+      span{
+        display: inline;
+      }
+      button{
+        display: block;
+        width: 100%;
+      }
+      button, a{
+        padding: 10px 40px;
+      }
+    }
+  }
+  nav{
+    .sections{
+      display: flex;
+      color: #fff;
+      button{
+        font-size: 1rem;
+        padding: 0 13px;
+        transition: .3s;
+      }
+      button:hover{
+        color: #ff005c;
+      }
+    }
+  }
+}
+
+@media(min-width: 992px){
+  nav{
+    display:  flex;
+
+    .first-row{
+      padding-left: 64px;
+    }
+
+    .second-row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a, button{
+        color: #0e0d0d;
+        font-size: 1rem;
+        padding: 0 10px;
+        transition: .3s;
+        &:hover{
+          color: #ff005c;
+        }
+        i{
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+@media(min-width: 1130px){
+  nav{
+    .first-row{
+      padding-left: 160px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.about-me{
+    text-align: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #E5D5FA;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .title{
+        font-family: sans-serif;
+        color: #25001b;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .subtitle-1{
+        margin-bottom: 15px;
+    }
+    .subtitle-2{
+        margin-bottom: 19px;
+    }
+    .text{
+        margin-bottom: 30px;
+    }
+    img{
+        border-radius: 6px;
+        line-height: 0;
+    }
+}
+
+@media(min-width: 768px){
+    .about-me{
+        padding: 64px 0 0 32px;
+        .row{
+            display: flex;
+            align-items: center;
+        }
+        .col-5{
+            width: 40%;
+            padding-right: 30px;
+        }
+        .col-7{
+            width: 60%;
+            line-height: 0;
+        }
+        img{
+            position: relative;
+            top: 15px;
+            z-index: 100;
+        }
+        .title{
+            font-family: 'Poppins', sans-serif;
+            color: #030303;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .subtitle-1, .text, .title{
+            text-align: left;
+        }
+    }
+}
+
+@media(min-width: 992px){
+    .about-me{
+        padding: 0 32px 0 64px;
+        margin-top: -60px;
+    }
+}
+
+@media(min-width: 1130px){
+    .about-me{
+      padding: 0 160px 0 160px;
+    }
+  }

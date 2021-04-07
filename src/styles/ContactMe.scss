@@ -1,0 +1,108 @@
+.contact-me{
+    h2{
+        display: none;
+    }
+    h2.title{
+        display: block;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    p, h2{
+        margin-bottom: 20px;
+    }
+    form{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+        text-align: right;
+    }
+    input, textarea{
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #c0c0c0;
+        padding: 8px 15px;
+        text-align: left;
+        outline: none;
+        font-size: 1rem;
+        transition: .4s;
+    }
+    i{
+        font-size: 1.8rem;
+    }
+    textarea{
+        resize: none;
+    }
+    .col-6{
+        position: relative;
+    }
+    button{
+        background: #fff600;
+        border: 0;
+        box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+        padding: 10px;
+        font-size: 1.2rem;
+        transition: .3s;
+    }
+    button:hover{
+        box-shadow: 2px 2px 20px rgba(0,0,0,.6);
+    }
+}
+
+.input-field, .input-field-ta{
+    margin-bottom: 25px;
+    height: 45px;
+    width: 100%;
+    position: relative;
+
+    label{
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #808080;
+        transition: .4s;
+    }
+}
+
+input:focus, textarea:focus,
+input:valid, textarea:valid{
+    border: 1px solid #1da1f2;
+}
+input:focus ~ label, textarea:focus ~ label,
+input:valid ~ label, textarea:valid ~ label{
+    transform: translateY(-33px);
+    background: #fff;
+    font-size: .9rem;
+    color: #1da1f2;
+}
+
+.input-field-ta{
+    height: 75px;
+
+    label{
+        top: 27%;
+    }
+}
+@media(min-width: 992px){
+    .contact-me{
+        display: flex;
+        flex-direction: row-reverse;
+        h2.title{display: none;}
+    }
+    .col-6{
+        width: 50%;
+        padding: 0 20px;
+    }
+    .info{
+        h2{
+            display:block;
+            color: #ff005c;
+            font-size: 2.5rem;
+        }
+        *{
+            text-align: right;
+        }
+    }
+}
