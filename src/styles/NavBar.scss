@@ -2,21 +2,35 @@
 
 nav{
     display: flex;
-    position: relative;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1b0114;
   
     .first-row{
       display:flex;
       align-items: center;
       background: #1b0114;
       justify-content: space-between;
-      height: 89px;
+      height: 60px;
       padding: 0 40px;
       z-index: 1000;
+      transition: .6s;
+
+      .logo{
+        font-family: 'Kaushan Script', sans-serif;
+        font-size: 2rem;
+        color: #fff600;
+        transition: .6s;
+      }
     }
     button, a{
       background: transparent;
       text-decoration: none;
       border: none;
+      transition: .6s;
     }
     button{
       font-size: 1.5rem;
@@ -29,11 +43,6 @@ nav{
     background: transparent;
     text-decoration: none;
     border: none;
-  }
-  .logo{
-    font-family: 'Kaushan Script', sans-serif;
-    font-size: 2rem;
-    color: #fff600;
   }
   
   .desplegable-menu{
@@ -73,6 +82,24 @@ nav{
       font-size: 1.5rem;
     }
   }
+  .first-row.active,
+  .desplegable-menu.active, .desplegable-menu.active button,
+  .desplegable-menu.active a{
+    background: white;
+    color: #241f1f;
+    &:hover{
+      color: #ff005c;
+    }
+  }
+  .first-row.active button, .first-row.active .logo{
+    color: #241f1f;
+  }
+  nav.active{
+    box-shadow: 1px 1px 8px rgba(0,0,0,.6);
+  }
+
+
+
 
 @media(min-width: 640px){
   .desplegable-menu{
@@ -106,8 +133,12 @@ nav{
         color: #ff005c;
       }
     }
+    .first-row{
+      height: 89px;
+    }
   }
 }
+
 
 @media(min-width: 992px){
   nav{
@@ -121,6 +152,7 @@ nav{
       display: flex;
       justify-content: center;
       align-items: center;
+      background: #fff;
       a, button{
         color: #0e0d0d;
         font-size: 1rem;

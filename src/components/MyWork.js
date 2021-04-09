@@ -1,4 +1,6 @@
 import {useEffect, useRef} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {addMyWork} from '../actions/actionsGenerator.js';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
@@ -9,6 +11,11 @@ const MyWork = () => {
     let work2 = useRef(null);
     let work3 = useRef(null);
     let work4 = useRef(null);
+
+    let myWorkSection = useRef(null);
+
+    const isEnglish = useSelector((state) => state.isEnglish);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         gsap.from(work1, {
@@ -55,11 +62,12 @@ const MyWork = () => {
                 start: 'top bottom'
             }
         });
-    }, []);
+        dispatch(addMyWork(myWorkSection));
+    }, [dispatch]);
 
     return(
-        <section className="my-works">
-            <h2 className="title">My works</h2>
+        <section className="my-works" ref={el => myWorkSection = el}>
+            <h2 className="title">{isEnglish ? 'My Work' : 'Mis Proyectos'}</h2>
             {/* Trivia app */}
             <div className="work" ref = {el => work1 = el}>
                 <div className="col-5">
@@ -69,19 +77,23 @@ const MyWork = () => {
                     <h2 className="subtitle-2">
                         <a href="https://triviapp101.netlify.app/">triviapp101.app</a>
                     </h2>
-                    <p className="text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum vero quibusdam similique ipsa fuga nam molestias voluptatibus facere tempora quod natus quisquam, numquam sapiente optio iure molestiae beatae iusto.
-                    </p>
+                    {isEnglish ? (
+                        <p className="text">Mini Game created using the API from {' '}
+                        <a href='https://opentdb.com/' target="_blank" rel="noreferrer">Open Trivia</a>. Was created using only Vanilla JavaScript.</p>
+                    ) : (
+                        <p className="text">Mini juego creado usando la API de {' '}
+                        <a href='https://opentdb.com/' target="_blank" rel="noreferrer">Open Trivia</a>. Creado usando sólamente Vanilla JavaScript.</p>
+                    )}
                     <div className="links">
-                        <a href="https://github.com/andreidem18/trivia-web">
+                        <a href="https://github.com/andreidem18/trivia-web" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://triviapp101.netlify.app/">
+                        <a href="https://triviapp101.netlify.app/" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://triviapp101.netlify.app/">
+                <a className="col-7" href="https://triviapp101.netlify.app/" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/trivia.jpg?raw=true" alt="trivia app"/>
                 </a>
             </div>
@@ -92,21 +104,25 @@ const MyWork = () => {
                         Ricky and Morty app
                     </h3>
                     <h2 className="subtitle-2">
-                        <a href="https://rickymorty.netlify.app/">rickymorty.app</a>
+                        <a href="https://rickymorty.netlify.app/">rickmorty.app</a>
                     </h2>
-                    <p className="text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum vero quibusdam similique ipsa fuga nam molestias voluptatibus facere tempora quod natus quisquam, numquam sapiente optio iure molestiae beatae iusto.
-                    </p>
+                    {isEnglish ? (
+                        <p className="text">Web application to search some information and characteres from an ubication from Rick and Morty universe. Was created using the API from {' '}
+                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> and ReactJS.</p>
+                    ) : (
+                        <p className="text">Aplicación web donde se puede buscar información y caracteres de una ubicación del universo de Rick y Morty. Fue creada usando la API de {' '}
+                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> y ReactJS.</p>
+                    )}
                     <div className="links">
-                        <a href="https://github.com/andreidem18/rick-morty">
+                        <a href="https://github.com/andreidem18/rick-morty" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://rickymorty.netlify.app/">
+                        <a href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://rickymorty.netlify.app/">
+                <a className="col-7" href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/ricky-morty.jpg?raw=true" alt="ricky morty wiki capture"/>
                 </a>
             </div>
@@ -119,19 +135,23 @@ const MyWork = () => {
                     <h2 className="subtitle-2">
                         <a href="https://mypokedex101.netlify.app/">mypokedex101.app</a>
                     </h2>
-                    <p className="text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum vero quibusdam similique ipsa fuga nam molestias voluptatibus facere tempora quod natus quisquam, numquam sapiente optio iure molestiae beatae iusto.
-                    </p>
+                    {isEnglish ? (
+                        <p className="text">Web aplication to search information about pokemons. Was created using the API from {' '}
+                        <a href='https://pokeapi.co/' target="_blank" rel="noreferrer">PokeAPI</a> and ReactJS with some concepts of useContext and Redux.</p>
+                    ) : (
+                        <p className="text">Aplicación web para buscar información sobre pokemons. Creada usando la API de {' '}
+                        <a href='https://pokeapi.co/' target="_blank" rel="noreferrer">PokeAPI</a> y ReactJS con algunos conceptos de useContext and Redux.</p>
+                    )}
                     <div className="links">
-                        <a href="https://github.com/andreidem18/pokeapi">
+                        <a href="https://github.com/andreidem18/pokeapi" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://mypokedex101.netlify.app/">
+                        <a href="https://mypokedex101.netlify.app/" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://mypokedex101.netlify.app/">
+                <a className="col-7" href="https://mypokedex101.netlify.app/" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/pokeapi.jpg?raw=true" alt="pokemon app capture"/>
                 </a>
             </div>
@@ -144,19 +164,23 @@ const MyWork = () => {
                     <h2 className="subtitle-2">
                         <a href="https://mychat101.netlify.app/">mychat101.app</a>
                     </h2>
-                    <p className="text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum vero quibusdam similique ipsa fuga nam molestias voluptatibus facere tempora quod natus quisquam, numquam sapiente optio iure molestiae beatae iusto.
-                    </p>
+                    {isEnglish ? (
+                        <p className="text">Chat created using the library  {' '}
+                        <a href='https://socket.io/' target="_blank" rel="noreferrer">Socket.IO</a>. The server side was created from the Academlo instructor and the client side was created by me using ReactJS.</p>
+                    ) : (
+                        <p className="text">Chat creado usando la librería {' '}
+                        <a href='https://socket.io/' target="_blank" rel="noreferrer">Socket.IO</a>. El lado del servidor fue creado por el instructor de Academlo y el lado del cliente fue creado por mi usando ReactJS.</p>
+                    )}
                     <div className="links">
-                        <a href="https://github.com/andreidem18/chat-app">
+                        <a href="https://github.com/andreidem18/chat-app" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://mychat101.netlify.app/">
+                        <a href="https://mychat101.netlify.app/" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://mychat101.netlify.app/">
+                <a className="col-7" href="https://mychat101.netlify.app/" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/chat.jpg?raw=true" alt="chat app capture"/>
                 </a>
             </div>

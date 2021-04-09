@@ -1,5 +1,6 @@
 import { gsap, Power4, Back } from 'gsap';
 import { useEffect } from 'react';
+import {useSelector} from 'react-redux'
 
 const Hero = () => {
 
@@ -7,7 +8,7 @@ const Hero = () => {
 
     useEffect(() => {
         tl.from(
-            '.first-row',
+            '.transition-1',
             {
                 opacity: 0,
                 y: '-30%',
@@ -32,13 +33,16 @@ const Hero = () => {
             scale: 0.1,
             duration: 1,
             ease: Back.easeOut.config(1.7)
-        })
-    }, [tl])
+        });
+    }, [tl]);
+
+    const isEnglish = useSelector((state) => state.isEnglish);
+
     return(
         <section className="hero">
-            <div className="first-row">
-                <h1 className="stagger1">Passion, dedication and a lot of coffee!</h1>
-                <div className="meet stagger1"><p>👇 Meet Andrés Mendoza</p></div>
+            <div className="first-row transition-1">
+                <h1 className="stagger1">{isEnglish ? 'Passion, Dedication and a lot of Coffee' : 'Hola! Soy Desarrollador Web'}</h1>
+                <div className="meet stagger1"><p>{isEnglish ? '👇 Meet Andrés Mendoza' : '👇 Conóceme'}</p></div>
                 <svg className="scroll stagger1" xmlns="http://www.w3.org/2000/svg" width="40" height="77" viewBox="0 0 40 77">
                     <g id="scroll" transform="translate(-253 -787)">
                         <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none" stroke="#fff" strokeWidth="4">

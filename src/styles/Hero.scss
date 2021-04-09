@@ -3,6 +3,7 @@ section.hero{
 }
 .hero{
     text-align: center;
+    margin-top: 59px;
 
     .first-row{
         padding: 64px;
@@ -47,6 +48,12 @@ section.hero{
     to{
         transform: translate(262px, 830px);
         z-index: 5;
+    }
+}
+
+@media(min-width: 640px){
+    .hero{
+        margin-top: 89px;
     }
 }
 

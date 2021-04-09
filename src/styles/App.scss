@@ -43,6 +43,13 @@ button{
 .text{
   color: #252525;
   font-size: .9rem;
+
+  a{
+    color: rgb(25, 123, 252);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 section{

@@ -1,4 +1,6 @@
 import {useEffect, useRef} from 'react';
+import {useDispatch} from 'react-redux';
+import {addMySkills} from '../actions/actionsGenerator.js';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
@@ -8,6 +10,9 @@ const MySkylls = () => {
     let html = useRef(null);
     let js = useRef(null);
     let react = useRef(null);
+
+    let mySkillsSection = useRef(null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         gsap.from(html, {
@@ -43,11 +48,12 @@ const MySkylls = () => {
                 start: 'top bottom'
             }
         });
-    }, [])
+        dispatch(addMySkills(mySkillsSection))
+    }, [dispatch])
 
 
     return(
-        <section className="my-skills">
+        <section className="my-skills" ref={el => mySkillsSection = el}>
             <div className="row">
                 <div className="col-4">
                     <div className="card" ref={el => html = el}>
@@ -61,7 +67,7 @@ const MySkylls = () => {
                                     <h2>80<span>%</span></h2>
                                 </div>
                             </div>
-                            <h2 class="skill">HTML & CSS</h2>
+                            <h2 className="skill">HTML & CSS</h2>
                         </div>
                     </div>
                 </div>
@@ -78,7 +84,7 @@ const MySkylls = () => {
                                     <h2>75<span>%</span></h2>
                                 </div>
                             </div>
-                            <h2 class="skill">JavaScript</h2>
+                            <h2 className="skill">JavaScript</h2>
                         </div>
                     </div>
                 </div>
