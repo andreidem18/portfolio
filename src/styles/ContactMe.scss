@@ -78,6 +78,10 @@ input:valid ~ label, textarea:valid ~ label{
     color: #1da1f2;
 }
 
+input:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .input-field-ta{
     height: 75px;
 

@@ -99,7 +99,7 @@ const NavBar = () => {
                 <a href="https://github.com/andreidem18" target="_blank" rel="noreferrer">
                     <i className="fab fa-github-square"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/andrés-david.mendoza-márquez-867a1b175" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/andrés-david-mendoza-márquez-867a1b175" target="_blank" rel="noreferrer">
                     <i className="fab fa-linkedin-in"></i> 
                 </a>
                 <button onClick={() => dispatch(changeLanguage())}>
@@ -128,7 +128,7 @@ const NavBar = () => {
                         <i className="fab fa-github-square"></i>
                         <span> {"  "}GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/andrés-david.mendoza-márquez-867a1b175" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/andrés-david-mendoza-márquez-867a1b175" target="_blank" rel="noreferrer">
                         <i className="fab fa-linkedin-in"></i>
                         <span> {"  "}LinkedIn</span>
 
