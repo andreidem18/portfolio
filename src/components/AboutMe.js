@@ -44,7 +44,7 @@ const AboutMe = () => {
                     )}
                 </div>
                 <div className="col-7 transition-2">
-                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/example.jpg?raw=true" alt="me"/>
+                    <img src="https://raw.githubusercontent.com/andreidem18/portfolio/main/src/images/my-picture.jpg" alt="me"/>
                 </div>
             </div>
         </section>
