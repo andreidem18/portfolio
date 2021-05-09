@@ -35,12 +35,12 @@ const AboutMe = () => {
                         {isEnglish ? 'About Me' : 'Sobre Mi'}
                     </h3>
                     <h2 className="subtitle-1">
-                        Front end developer
+                        Full-Stack developer
                     </h2>
                     {isEnglish ? (
-                        <p className="text">Web Developer with knowledge mostly in HTML, CSS, JavaScript, Bootstrap, React and Java. currently student in <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> in order to become a full-stack developer. I have skills working in team and fast-learning</p> 
+                        <p className="text">I am a passionate about solving problems through technology. I have knowledge in HTML, CSS, JavaScript, Bootstrap and React to the client side, and Node JS, Express and Sequelize to the server side. Currently, I am studing in <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expanding my Back End skills.</p> 
                     ) : (
-                        <p className="text">Desarrollador Web con conocimientos principalmente en HTML, CSS, JavaScript, Bootstrap, React y Java. Actualmente estudiante de <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> adquiriendo los conocimientos para volverse desarrollador full-stack. Cuenta con habilidades para trabajar en equipo y aprendizaje rápido.</p>
+                        <p className="text">Apasionado en resolver problemas a través de la tecnología. Cuento con conocimientos en HTML, CSS, JavaScript, Bootstrap y React para el lado del cliente, y Node JS, Express y Sequelize para el lado del servidor. Actualmente estudiante de <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expandiendo mis conocimientos en el Back End.</p>
                     )}
                 </div>
                 <div className="col-7 transition-2">
