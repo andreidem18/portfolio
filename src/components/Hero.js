@@ -42,7 +42,7 @@ const Hero = () => {
         <section className="hero">
             <div className="first-row transition-1">
                 <h1 className="stagger1">
-                    {isEnglish ? 'Passion, Dedication and a lot of Coffee!' : 'Hola! Soy Desarrollador Web'}
+                    {isEnglish ? 'Passion, Dedication and a lot of Coffee!' : '¡Hola! Soy Desarrollador Web'}
                 </h1>
                 <div className="meet stagger1">
                     <p data-text={isEnglish ? '👇 Meet Andrés Mendoza' : '👇 Conóceme'}>
