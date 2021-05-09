@@ -32,7 +32,7 @@ section.hero{
                 margin: 40px auto;
                 display: inline-block;
                 position: relative;
-                -webkit-text-stroke: 0.01rem rgba(255, 0, 93, 0.7);
+                -webkit-text-stroke: 0.01rem rgb(255, 0, 93);
                 &::before{
                     content: attr(data-text);
                     position: absolute;
