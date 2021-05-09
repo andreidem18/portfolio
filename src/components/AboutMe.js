@@ -40,7 +40,7 @@ const AboutMe = () => {
                     {isEnglish ? (
                         <p className="text">I am a passionate about solving problems through technology. I have knowledge in HTML, CSS, JavaScript, Bootstrap and React to the client side, and Node JS, Express and Sequelize to the server side. Currently, I am studing in <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expanding my Back End skills.</p> 
                     ) : (
-                        <p className="text">Apasionado en resolver problemas a través de la tecnología. Cuento con conocimientos en HTML, CSS, JavaScript, Bootstrap y React para el lado del cliente, y Node JS, Express y Sequelize para el lado del servidor. Actualmente estudiante de <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expandiendo mis conocimientos en el Back End.</p>
+                        <p className="text">Apasionado resolviendo problemas a través de la tecnología. Cuento con conocimientos en HTML, CSS, JavaScript, Bootstrap y React para el lado del cliente, y Node JS, Express y Sequelize para el lado del servidor. Actualmente estudiante de <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expandiendo mis conocimientos en el Back End.</p>
                     )}
                 </div>
                 <div className="col-7 transition-2">
