@@ -26,9 +26,27 @@ section.hero{
             margin: 20px 0;
         }
         .meet{
-            font-weight: bold;
-            color: #ff005c;
-            margin: 40px 0;
+            p{
+                font-weight: bold;
+                color: #25001b;
+                margin: 40px auto;
+                display: inline-block;
+                position: relative;
+                -webkit-text-stroke: 0.01rem rgba(255, 0, 93, 0.259);
+                &::before{
+                    content: attr(data-text);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20%;
+                    height: 100%;
+                    color:#ff005d;
+                    border-right: 1px solid #ff005d;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    animation: animate 4s linear infinite;
+                }
+            }
         }
         .scroll{
             margin-top: 20px;
@@ -36,6 +54,17 @@ section.hero{
         }
     }
 }
+
+@keyframes animate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width:100%;
+    }
+}
+
+
 
 .circle{
     animation: circleAnim 1s infinite alternate-reverse;
@@ -64,6 +93,11 @@ section.hero{
             h1{
                 font-size: 3rem;
                 line-height: 1.2em;
+            }
+            .meet{
+                p{
+                    margin: 40px 0;
+                }
             }
         }
         .second-row{

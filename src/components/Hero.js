@@ -41,8 +41,14 @@ const Hero = () => {
     return(
         <section className="hero">
             <div className="first-row transition-1">
-                <h1 className="stagger1">{isEnglish ? 'Passion, Dedication and a lot of Coffee' : 'Hola! Soy Desarrollador Web'}</h1>
-                <div className="meet stagger1"><p>{isEnglish ? '👇 Meet Andrés Mendoza' : '👇 Conóceme'}</p></div>
+                <h1 className="stagger1">
+                    {isEnglish ? 'Passion, Dedication and a lot of Coffee' : 'Hola! Soy Desarrollador Web'}
+                </h1>
+                <div className="meet stagger1">
+                    <p data-text={isEnglish ? '👇 Meet Andrés Mendoza' : '👇 Conóceme'}>
+                        {isEnglish ? '👇 Meet Andrés Mendoza' : '👇 Conóceme'}
+                    </p>
+                </div>
                 <svg className="scroll stagger1" xmlns="http://www.w3.org/2000/svg" width="40" height="77" viewBox="0 0 40 77">
                     <g id="scroll" transform="translate(-253 -787)">
                         <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none" stroke="#fff" strokeWidth="4">
