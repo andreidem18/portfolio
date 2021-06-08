@@ -104,7 +104,7 @@ const MyWork = () => {
                         IMDb Copy
                     </h3>
                     <h2 className="subtitle-2">
-                        <a href="https://imdb4.herokuapp.com/api/v1">imdb4.com/api</a>
+                        <a href="https://imdb4.herokuapp.com/api-docs">imdb4.com/api</a>
                     </h2>
                     {isEnglish ? (
                         <p className="text">REST API to search and save information about movies and series. Was created using Node JS, Express and Sequelize</p>
@@ -115,13 +115,13 @@ const MyWork = () => {
                         <a href="https://github.com/andreidem18/imdb1" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://imdb4.herokuapp.com/api/v1" target="_blank" rel="noreferrer">
+                        <a href="https://imdb4.herokuapp.com/api-docs" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://imdb4.herokuapp.com/api/v1" target="_blank" rel="noreferrer">
-                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/imdb.jpg" alt="ricky morty wiki capture"/>
+                <a className="col-7" href="https://imdb4.herokuapp.com/api-docs" target="_blank" rel="noreferrer">
+                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/imdb.jpg" alt="IMDb documentation capture"/>
                 </a>
             </div>
             {/* Pokemon app */}
