@@ -97,32 +97,30 @@ const MyWork = () => {
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/trivia.jpg?raw=true" alt="trivia app"/>
                 </a>
             </div>
-            {/* Ricky Morty app */}
+            {/* IMDb Copy */}
             <div className="work" ref = {el => work2 = el}>
                 <div className="col-5">
                     <h3 className="subtitle-1">
-                        Ricky and Morty app
+                        IMDb Copy
                     </h3>
                     <h2 className="subtitle-2">
-                        <a href="https://rickymorty.netlify.app/">rickmorty.app</a>
+                        <a href="https://imdb4.herokuapp.com/api/v1">imdb4.com/api</a>
                     </h2>
                     {isEnglish ? (
-                        <p className="text">Web application to search some information and characteres from an ubication from Rick and Morty universe. Was created using the API from {' '}
-                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> and ReactJS.</p>
+                        <p className="text">REST API to search and save information about movies and series. Was created using Node JS, Express and Sequelize</p>
                     ) : (
-                        <p className="text">Aplicación web donde se puede buscar información y caracteres de una ubicación del universo de Rick y Morty. Fue creada usando la API de {' '}
-                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> y ReactJS.</p>
+                        <p className="text">REST API para buscar y guardar información acerca de películas y series. Fue creada usando Node JS, Express y Sequelize</p>
                     )}
                     <div className="links">
-                        <a href="https://github.com/andreidem18/rick-morty" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/andreidem18/imdb1" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i> 
                         </a>
-                        <a href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
+                        <a href="https://imdb4.herokuapp.com/api/v1" target="_blank" rel="noreferrer">
                             <i className="far fa-file"></i>
                         </a>
                     </div>
                 </div>
-                <a className="col-7" href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
+                <a className="col-7" href="https://imdb4.herokuapp.com/api/v1" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/ricky-morty.jpg?raw=true" alt="ricky morty wiki capture"/>
                 </a>
             </div>
