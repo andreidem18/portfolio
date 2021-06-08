@@ -121,7 +121,7 @@ const MyWork = () => {
                     </div>
                 </div>
                 <a className="col-7" href="https://imdb4.herokuapp.com/api-docs" target="_blank" rel="noreferrer">
-                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/imdb.jpg" alt="IMDb documentation capture"/>
+                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/imdb.jpg?raw=true" alt="IMDb documentation capture"/>
                 </a>
             </div>
             {/* Pokemon app */}
