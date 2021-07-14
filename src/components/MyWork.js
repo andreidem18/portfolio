@@ -124,6 +124,35 @@ const MyWork = () => {
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/imdb.jpg?raw=true" alt="IMDb documentation capture"/>
                 </a>
             </div>
+            {/* Chat app */}
+            <div className="work"  ref = {el => work4 = el}>
+                <div className="col-5">
+                    <h3 className="subtitle-1">
+                        Rick and Morty Wiky
+                    </h3>
+                    <h2 className="subtitle-2">
+                        <a href="https://rickymorty.netlify.app/">rickmorty.app</a>
+                    </h2>
+                    {isEnglish ? (
+                        <p className="text">Web app created with the REST API of {' '}
+                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> To see information about the characters from different places from the Rick and Morty universe. It was created using React JS</p>
+                    ) : (
+                        <p className="text">Aplicación web creada con la REST API de {' '}
+                        <a href='https://rickandmortyapi.com/' target="_blank" rel="noreferrer">The Rick and Morty API</a> Para ver informacion acerca de los personajes de diferentes ubicaciones del universo de Rick y Morty. Creado usando React JS</p>
+                    )}
+                    <div className="links">
+                        <a href="https://github.com/andreidem18/rick-morty" target="_blank" rel="noreferrer">
+                            <i className="fab fa-github-square"></i> 
+                        </a>
+                        <a href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
+                            <i className="far fa-file"></i>
+                        </a>
+                    </div>
+                </div>
+                <a className="col-7" href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
+                    <img src="https://raw.githubusercontent.com/andreidem18/portfolio/main/src/images/ricky-morty.jpg"/>
+                </a>
+            </div>
             {/* Pokemon app */}
             <div className="work" ref = {el => work3 = el}>
                 <div className="col-5">
@@ -151,35 +180,6 @@ const MyWork = () => {
                 </div>
                 <a className="col-7" href="https://mypokedex101.netlify.app/" target="_blank" rel="noreferrer">
                     <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/pokeapi.jpg?raw=true" alt="pokemon app capture"/>
-                </a>
-            </div>
-            {/* Chat app */}
-            <div className="work"  ref = {el => work4 = el}>
-                <div className="col-5">
-                    <h3 className="subtitle-1">
-                        Chat app
-                    </h3>
-                    <h2 className="subtitle-2">
-                        <a href="https://mychat101.netlify.app/">mychat101.app</a>
-                    </h2>
-                    {isEnglish ? (
-                        <p className="text">Chat created using the library  {' '}
-                        <a href='https://socket.io/' target="_blank" rel="noreferrer">Socket.IO</a>. The server side was created from the Academlo instructor and the client side was created by me using ReactJS.</p>
-                    ) : (
-                        <p className="text">Chat creado usando la librería {' '}
-                        <a href='https://socket.io/' target="_blank" rel="noreferrer">Socket.IO</a>. El lado del servidor fue creado por el instructor de Academlo y el lado del cliente fue creado por mi usando ReactJS.</p>
-                    )}
-                    <div className="links">
-                        <a href="https://github.com/andreidem18/chat-app" target="_blank" rel="noreferrer">
-                            <i className="fab fa-github-square"></i> 
-                        </a>
-                        <a href="https://mychat101.netlify.app/" target="_blank" rel="noreferrer">
-                            <i className="far fa-file"></i>
-                        </a>
-                    </div>
-                </div>
-                <a className="col-7" href="https://mychat101.netlify.app/" target="_blank" rel="noreferrer">
-                    <img src="https://github.com/andreidem18/portfolio/blob/main/src/images/chat.jpg?raw=true" alt="chat app capture"/>
                 </a>
             </div>
         </section>
