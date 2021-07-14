@@ -150,7 +150,7 @@ const MyWork = () => {
                     </div>
                 </div>
                 <a className="col-7" href="https://rickymorty.netlify.app/" target="_blank" rel="noreferrer">
-                    <img src="https://raw.githubusercontent.com/andreidem18/portfolio/main/src/images/ricky-morty.jpg"/>
+                    <img src="https://raw.githubusercontent.com/andreidem18/portfolio/main/src/images/ricky-morty.jpg" alt="Rick and Morty app capture"/>
                 </a>
             </div>
             {/* Pokemon app */}
