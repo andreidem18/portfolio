@@ -38,9 +38,9 @@ const AboutMe = () => {
                         Full-Stack developer
                     </h2>
                     {isEnglish ? (
-                        <p className="text">I am a passionate about solving problems through technology. I have knowledge in HTML, CSS, JavaScript, Bootstrap and React to the client side, and Node JS, Express and Sequelize to the server side. Currently, I am studing in <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expanding my Back End skills.</p> 
+                        <p className="text">I am a passionate about solving problems through technology. I have knowledge in HTML, CSS, JavaScript, Bootstrap and React to the client side, and Node JS and Django to the server side. Currently, I am working in a Mexican startup called AI/SD as React developer, and I am studying software engineering at <a href='https://www.unir.net/' target="_blank" rel="noreferrer">UNIR</a>.</p> 
                     ) : (
-                        <p className="text">Apasionado resolviendo problemas a través de la tecnología. Cuento con conocimientos en HTML, CSS, JavaScript, Bootstrap y React para el lado del cliente, y Node JS, Express y Sequelize para el lado del servidor. Actualmente estudiante de <a href='https://www.academlo.com/' target="_blank" rel="noreferrer">Academlo</a> expandiendo mis conocimientos en el Back End.</p>
+                        <p className="text">Apasionado resolviendo problemas a través de la tecnología. Cuento con conocimientos en HTML, CSS, JavaScript, Bootstrap y React para el lado del cliente, y Node JS y Django para el lado del servidor. Actualmente formo parte del equipo de una startup mexicana llamada AI/SD, y me encuentro estudiando ingeniería informática en la <a href='https://www.unir.net/' target="_blank" rel="noreferrer">UNIR</a>.</p>
                     )}
                 </div>
                 <div className="col-7 transition-2">
